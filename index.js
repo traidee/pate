@@ -1,8 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const { Bot, webhookCallback } = require('grammy');
-const cors = require('cors');
-const path = require('path');
+import 'dotenv/config';
+import express from 'express';
+import { Bot, webhookCallback } from 'grammy';
+import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
